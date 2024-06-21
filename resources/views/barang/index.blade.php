@@ -57,7 +57,11 @@
                                 <td>{{ $rowbarang->stok  }}</td>
                                 <td>{{ $rowbarang->kategori->kategori  }}</td>
                                 <td class="text-center">
+                                    @if ($rowbarang->foto)
                                     <img src="{{ asset('storage/foto_barang/'.$rowbarang->foto) }}" class="rounded" style="width: 150px">
+                                    @else
+                                        <img src="{{ asset('storage/foto_barang/default.crdownload') }}" alt="Foto Default" style="width: 150px">
+                                    @endif
                                 </td>
                                 <td class="text-center">
                                     <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('barang.destroy', $rowbarang->id) }}" method="POST">
@@ -74,6 +78,7 @@
                                 Data barang belum tersedia!
                             </div>
                         @endforelse
+
                     </tbody>
                    
                 </table>
