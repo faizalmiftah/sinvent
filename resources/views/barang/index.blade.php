@@ -60,7 +60,7 @@
                                     @if ($rowbarang->foto)
                                     <img src="{{ asset('storage/foto_barang/'.$rowbarang->foto) }}" class="rounded" style="width: 150px">
                                     @else
-                                        <img src="{{ asset('storage/foto_barang/default.crdownload') }}" alt="Foto Default" style="width: 150px">
+                                        <img src="{{ asset('storage/foto_barang/default.jpg') }}" alt="Foto Default" style="width: 150px">
                                     @endif
                                 </td>
                                 <td class="text-center">
